@@ -1,0 +1,29 @@
+{
+    "artists": [
+      {
+        "id": 1,
+        "name": "J. Cole",
+        "album": "",
+        "genre": ""
+             }
+      {
+        "id": 2,
+        "name": "",
+        "album": "",
+        "genre":""
+      },
+      {
+        "id": 3,
+        "name": "",
+        "album": "",
+        "genre": ""
+      },
+      {
+        "id": 4,
+        "name": "",
+        "album": "",
+        "genre": ""
+      }
+      // Add more tracks as needed
+    ]
+//   }
