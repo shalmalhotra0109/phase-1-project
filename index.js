@@ -42,6 +42,16 @@ const fetchArtistSongs = async (artistId) => {
     renderArtistSongs(artistSongs)
 
 }
+const fetchArtistAlbums = async (artistId) => {
+    const response = await fetch(`https://api.spotify.com/v1/artists/${artistId}/albums?market=US`, {
+        headers: { "Authorization": `Bearer ${data.access_token}` }
+    });
+
+    const artistAlbums = await response.json()
+    
+    renderArtistAlbums(artistAlbums)
+
+}
 
 
 const renderArtist = (artist) => {
@@ -54,6 +64,14 @@ const renderArtistSongs = (artistSongs) => {
     artistSongs.tracks.forEach((song) => {
         const li = document.createElement("li")
         li.textContent = song.name
+        content.append(li)
+    })
+}
+const renderArtistAlbums = (artistAlbums) => {
+    console.log(artistAlbums)
+    artistAlbums.albums.forEach((album) => {
+        const li = document.createElement("li")
+        li.textContent = album.name
         content.append(li)
     })
 }
